@@ -1,0 +1,38 @@
+<% layout('layout/boilerplate') %>
+    <h1 class="text-center mb-4">Dah Belhna</h1>
+    <div class="row">
+        <form action="/campgrounds" method="POST" novalidate class="validate-form" enctype="multipart/form-data">
+            <div class="col-6 offset-3">
+                <div class="form-group mb-4">
+                    <input placeholder="Title" type="text" id="title" class="form-control" name="campground[title]" required>
+                </div>
+                <div class="form-group mb-4">
+                    <input placeholder="Location" type="text" id="location" class="form-control"
+                        name="campground[location]" required>
+                </div>
+                <input type="file" name="image" multiple class="mb-3 form-control" id="formFileMultiple">
+                <!-- <div class="form-group mb-4">
+                    <input placeholder="Image URL" type="text" id="image" class="form-control" name="campground[image]" required>
+                </div> -->
+                <div class="mb-4">
+                    <div class="input-group">
+                        <span class="input-group-text" id="basic-addon1">₹</span>
+                        <input placeholder="/night" type="text" class="form-control" id="price" name="campground[price]" aria-describedby="basic-addon1" required>
+                    </div>
+                </div>
+                <div class="form-group mb-4">
+                    <textarea placeholder="Description" type="text" id="description" class="form-control" name="campground[description]" required></textarea>
+                </div>
+            </div>
+
+            <div class="d-flex justify-content-center">
+                <button type="submit" class="btn btn-lg btn-outline-success me-5">ADD</button>
+                <button type="reset" class="btn btn-lg btn-outline-secondary">RESET</button>
+            </div>
+        </form>
+        <br>
+        <br>
+
+    </div>
+
+    
